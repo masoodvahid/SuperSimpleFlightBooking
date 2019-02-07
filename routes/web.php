@@ -15,9 +15,9 @@ Route::get('/', 'FlightController@list');
 
 Route::post('/search', 'FlightController@search');
 
-Route::get('/reserve/{id}', 'FlightController@reserve');
+Route::get('/reserve/{id}', 'FlightController@show');
 
-Route::post('/register', 'FlightController@regiser');
+Route::post('/reserve', 'FlightController@reserve');
 
 Auth::routes();
 

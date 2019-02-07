@@ -54,7 +54,7 @@ class RegisterController extends Controller
             'gender'    => ['required', 'string'],
             'code_melli'=> ['required', 'integer', 'digits_between:8,10', 'unique:users'],
             'mobile'    => ['required', 'integer', 'digits_between:10,11'],
-            'email'     => ['required', 'string', 'email', 'max:255', 'unique:users'],            
+            'email'     => ['required', 'string', 'email', 'max:255', 'unique:users'],
         ]);
     }
 
@@ -64,9 +64,11 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
+
+/*
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
             'gender' => $data['gender'],
@@ -75,5 +77,8 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['code_melli']),
         ]);
+        $user->flights()->sync($user->id);
+        return $user;
     }
+*/
 }

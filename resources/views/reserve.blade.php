@@ -29,7 +29,7 @@
 
 						<div class="booking-form">
 							<!-- Search Box -->
-							<form name="reserve_flight" method="post" action="/register">
+							<form name="reserve_flight" method="post" action="/reserve">
 								@csrf
 								<input type="hidden" name="flight_id" value="{{ $flight->id }}">
 								<div class="col-md-4">
@@ -113,7 +113,7 @@
 							@if($errors->any())
 							<div class="col-md-12">
 								<div class="alert alert-danger">
-									<h4>{{$errors->first()}}</h4>
+									{{$errors->first()}}
 								</div>
 							</div>
 							@endif

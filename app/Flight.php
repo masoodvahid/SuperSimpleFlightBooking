@@ -10,9 +10,9 @@ class Flight extends Model
         'from', 'to', 'date', 'capacity', 'class', 'status',
     ];
 
-    public function reserved_flight()
+    public function users()
     {
-        return $this->hasMany('App\Reserved_flight', 'flight_id', 'id');
+        return $this->belongsToMany('App\User')->withPivot('user_comment', 'admin_comment')->as('reserved_by')->withTimestamps();
     }
 
 }

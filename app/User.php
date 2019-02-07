@@ -28,8 +28,14 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function Reserved_flight()
+    // Sakhte Password 
+    protected $attributes = array(
+      'password' => '12345'
+    );
+
+    public function flights()
     {
-        return $this->hasMany('App\Flight', 'user_id', 'id');
+        return $this->belongsToMany('App\Flight')->withPivot('user_comment', 'admin_comment')->as('reserved_flight')->withTimestamps();
     }
+
 }

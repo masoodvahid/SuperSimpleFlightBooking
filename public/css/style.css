@@ -144,7 +144,7 @@
 
 .reserve-btn:hover{
 	background-color: #f95d05;
-	transition: 500ms;	
+	transition: 500ms;
 }
 
 a.reserve-btn {
@@ -179,6 +179,6 @@ a.reserve-btn:hover {
 }
 
 .alert {
-    padding: 15px 15px 8px;
     direction: rtl;
+		font-size: 25px;
 }

@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Flight;
+use App\User;
+use Illuminate\Support\Facades\Auth;
+
 
 class HomeController extends Controller
 {
@@ -23,7 +27,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user_flights = User::with('flights')->where('id', Auth::id())->first();
+
+        dd($user_flights);
+        return view('home', compact("user_flights"));
     }
-    
+
 }
