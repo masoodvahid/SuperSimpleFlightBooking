@@ -27,10 +27,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user_flights = User::with('flights')->where('id', Auth::id())->first();
-
-        dd($user_flights);
-        return view('home', compact("user_flights"));
+        $user = User::with('flights')->where('id', Auth::id())->first(); 
+        //dd($user_flights);
+        return view('home', compact("user"));
     }
 
 }

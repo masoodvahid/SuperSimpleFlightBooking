@@ -12,7 +12,7 @@ class Flight extends Model
 
     public function users()
     {
-        return $this->belongsToMany('App\User')->withPivot('user_comment', 'admin_comment')->as('reserved_by')->withTimestamps();
+        return $this->belongsToMany('App\User')->withPivot('user_comment', 'admin_comment')->withTimestamps();
     }
 
 }

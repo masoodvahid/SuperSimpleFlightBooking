@@ -15,5 +15,11 @@ return [
 
     'failed' => 'These credentials do not match our records.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-
+    'Login' => 'ورود',
+    'Register' => 'ثبت نام',
+    'Logout' => 'خروج',
+    'Remember Me' => 'مرا بخاطر بسپار',
+    'Password' => 'رمز عبور',
+    'E-Mail Address' => 'ایمیل',
+    'Forgot Your Password?' => 'رمز عبور خود را فراموش کرده اید ؟',
 ];
