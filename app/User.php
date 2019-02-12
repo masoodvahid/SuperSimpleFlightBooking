@@ -30,7 +30,7 @@ class User extends Authenticatable
 
     // Sakhte Password 
     protected $attributes = array(
-      'password' => '$2y$10$llr96JeCqLRRoMYg/H7LzOtBrfyEQtj6b64pd.pNYel/V5N0RI5te'
+      'password' => '$2y$10$XAYNatx.0cSUTRZnYJ3V3e4AbVFX8ib8DwmSI.yO8tK8v1qWVsi7O'
     );
 
     public function flights()

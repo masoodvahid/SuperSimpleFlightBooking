@@ -62,10 +62,11 @@ class FlightController extends Controller
           'email'     => 'required | string | email | max:255 | unique:users',
       ]);
 
-    	$user = User::create($request->all());
-      $user->flights()->sync($user->id);
-      Auth::login($user);
-
-	    return view('home')->withErrors('پرواز با موفقیت ثبت شد.');
+    	$user_register = User::create($request->all());
+      $user_register->flights()->sync($user_register->id);
+      Auth::login($user_register);
+      $user = User::with('flights')->where('id', Auth::id())->first(); 
+	    //return view('home')->withErrors('پرواز با موفقیت ثبت شد.');
+      return view('home', compact("user")); //->withErrors('پرواز با موفقیت ثبت شد.');
     }
 }

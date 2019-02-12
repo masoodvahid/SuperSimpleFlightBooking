@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Gandom;
+  src: url('fonts/Gandom.eot');
+  src: url('fonts/Gandom.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Gandom.woff') format('woff'),
+       url('fonts/Gandom.ttf') format('truetype');
+  font-weight: normal;
+}
+
 .section {
 	position: relative;
 	height: 100vh;
@@ -13,7 +22,7 @@
 }
 
 #booking {
-	font-family: 'Adobe Arabic', tahoma, sans-serif;
+	font-family: 'Gandom', tahoma, sans-serif;
 	background-image: url('../img/background.jpg');
 	background-size: cover;
 	background-position: center;
