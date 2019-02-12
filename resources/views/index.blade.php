@@ -33,14 +33,14 @@
 									<div class="form-group">
 										<select class="form-control" name="from">
 											<option value=""></option>
-											<option value="اصفهان" {{ (old("from") == 'اصفهان' ? "selected":"") }} >اصفهان</option>
-											<option value="تهران" {{ (old("from") == 'تهران' ? "selected":"") }}>تهران</option>
-											<option value="شیراز" {{ (old("from") == 'شیراز' ? "selected":"") }}>شیراز</option>
-											<option value="مشهد" {{ (old("from") == 'مشهد' ? "selected":"") }}>مشهد</option>
-											<option value="تبریز" {{ (old("from") == 'تبریز' ? "selected":"") }}>تبریز</option>
+											<option value="اصفهان">اصفهان</option>
+											<option value="تهران">تهران</option>
+											<option value="شیراز">شیراز</option>
+											<option value="مشهد">مشهد</option>
+											<option value="تبریز">تبریز</option>
 										</select>
 										<span class="select-arrow"></span>
-										<span class="form-label">FROM | مبدا</span>
+										<span class="form-label">مبدا</span>
 									</div>
 								</div>
 								<div class="col-md-4">
@@ -54,7 +54,7 @@
 											<option value="تبریز">تبریز</option>
 										</select>
 										<span class="select-arrow"></span>
-										<span class="form-label">TO | مقصد</span>
+										<span class="form-label">مقصد</span>
 									</div>
 								</div>
 								<div class="col-md-2">
@@ -66,7 +66,7 @@
 											<option value="3">3</option>
 										</select>
 										<span class="select-arrow"></span>
-										<span class="form-label">Person | افراد</span>
+										<span class="form-label">نفرات</span>
 									</div>
 								</div>
 								<div class="col-md-2">
@@ -78,24 +78,24 @@
 											<option value="economy">Economy</option>
 										</select>
 										<span class="select-arrow"></span>
-										<span class="form-label">Class | نوع</span>
+										<span class="form-label">نوع صندلی</span>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<input class="form-control" type="date" name="checkin" value="{{ \Carbon\Carbon::now()->format('Y-m-d') }}">
-										<span class="form-label">From Date | از تاریخ</span>
+										<span class="form-label">از تاریخ</span>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<input class="form-control" type="date" name="checkout" value="{{ \Carbon\Carbon::now()->addMonths(2)->format('Y-m-d') }}">
-										<span class="form-label">To Date |تا تاریخ</span>
+										<span class="form-label">تا تاریخ</span>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-btn">
-										<button class="submit-btn">CHECK | بررسی</button>
+										<button class="submit-btn">بررسی</button>
 									</div>
 								</div>
 							</form>

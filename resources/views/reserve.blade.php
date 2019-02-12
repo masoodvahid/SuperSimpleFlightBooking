@@ -35,55 +35,55 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<input class="form-control" name="firstname" value={{ old('firstname') }}>
-										<span class="form-label">First Name | نام</span>
+										<span class="form-label">نام</span>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<input class="form-control"	name="lastname" value={{ old('lastname') }}>
-										<span class="form-label">Last Name | نام خانوادگی</span>
+										<span class="form-label">نام خانوادگی</span>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<select class="form-control" name="gender">
-											<option value="male">Man | مذکر</option>
-											<option value="female">Woman | مونث</option>
+											<option value="male">مذکر</option>
+											<option value="female">مونث</option>
 										</select>
 										<span class="select-arrow"></span>
-										<span class="form-label">Gender | جنسیت</span>
+										<span class="form-label">جنسیت</span>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<input class="form-control" name="code_melli" value={{ old('code_melli') }}>
-										<span class="form-label">National Code | کد ملی </span>
+										<span class="form-label">کد ملی </span>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<input class="form-control" name="mobile" value={{ Request::old('mobile') }}>
-										<span class="form-label">Mobile | شماره همراه</span>
+										<span class="form-label">شماره همراه</span>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="form-group">
 										<input class="form-control" name="email" value={{ old('email') }}>
-										<span class="form-label">Email | ایمیل </span>
+										<span class="form-label"> ایمیل </span>
 									</div>
 								</div>
 
 								<div class="col-md-2">
 									<div class="form-group">
 										<input class="form-control" Value="⏫ {{ $flight->from }}" disabled>
-										<span class="form-label">FROM | امبدا</span>
+										<span class="form-label"> امبدا</span>
 									</div>
 								</div>
 
 								<div class="col-md-2">
 									<div class="form-group">
 										<input class="form-control" Value="⏬ {{ $flight->to }}" disabled>
-										<span class="form-label">DEST | مقصد</span>
+										<span class="form-label"> مقصد</span>
 									</div>
 								</div>
 
@@ -91,20 +91,20 @@
 								<div class="col-md-2">
 									<div class="form-group">
 										<input class="form-control" Value="📅 {{ $flight->date }}" disabled>
-										<span class="form-label">Date | تاریخ</span>
+										<span class="form-label"> تاریخ</span>
 									</div>
 								</div>
 
 								<div class="col-md-2">
 									<div class="form-group">
 										<input class="form-control" Value="🛫 {{ $flight->airline }}" disabled>
-										<span class="form-label">Airline | خط هوایی</span>
+										<span class="form-label"> خط هوایی</span>
 									</div>
 								</div>
 
 								<div class="col-md-4">
 									<div class="form-btn">
-										<button class="submit-btn"><i class="fa fa-disk"></i> Save | ذخیره</button>
+										<button class="submit-btn"><i class="fa fa-disk"></i> ذخیره</button>
 									</div>
 								</div>
 							</form>

@@ -27,9 +27,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = User::with('flights')->where('id', Auth::id())->first(); 
-        //dd($user_flights);
-        return view('home', compact("user"));
+        if(Auth::id() == '1'){
+            $users = User::with('flights')->get();
+            return view('admin', compact('users'));
+        }else{
+            $user = User::with('flights')->where('id', Auth::id())->first();
+            return view('home', compact("user"));
+        }                
     }
 
 }

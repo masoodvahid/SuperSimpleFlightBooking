@@ -11,7 +11,7 @@
             </div>
         </div>
         @endif
-
+        
         <div class="card mb-2" style="border: 2px solid rgb(211, 228, 206)">
                 <div class="card-header" style="background-color: #f5ff9c">
                     <span class="badge badge-warning badge-pill">{{ $user->firstname.' '.$user->lastname}}</span>
