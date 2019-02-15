@@ -11,7 +11,12 @@
 |
 */
 
+
+Auth::routes();
+
 Route::get('/', 'FlightController@list');
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/search', 'FlightController@search');
 
@@ -19,6 +24,7 @@ Route::get('/reserve/{id}', 'FlightController@show');
 
 Route::post('/reserve', 'FlightController@reserve');
 
-Auth::routes();
+Route::get('/delete/{user_id}/{flight_id}', 'FlightController@delete');
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+

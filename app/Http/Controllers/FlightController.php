@@ -49,6 +49,14 @@ class FlightController extends Controller
     	return view('reserve', compact("flight"));
     }
 
+
+
+    public function delete($user_id, $flight_id){
+      $user = User::find($user_id);
+      $user->flights()->detach($flight_id);
+      return redirect()->route('home')->withErrors('حذف با موفقیت انجام شد.');
+    }
+
     /**
     * عملیات ثبت کاربر در دیتابیس و ثبت مشخصات پرواز او
     */
@@ -63,10 +71,11 @@ class FlightController extends Controller
       ]);
 
     	$user_register = User::create($request->all());
-      $user_register->flights()->sync($user_register->id);
+      $user_register->flights()->sync($user_register->id); // Flight-User :: Baraye Table Vasete bein Flight va User
+
       Auth::login($user_register);
       $user = User::with('flights')->where('id', Auth::id())->first(); 
-	    //return view('home')->withErrors('پرواز با موفقیت ثبت شد.');
+	    
       return view('home', compact("user")); //->withErrors('پرواز با موفقیت ثبت شد.');
     }
 }
